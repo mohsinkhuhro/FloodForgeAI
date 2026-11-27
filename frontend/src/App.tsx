@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { AppShell } from './components/layout/AppShell';
 import { FloodForgeProvider } from './context/FloodForgeContext';
 import { CommandCenter } from './pages/CommandCenter';
@@ -31,6 +32,7 @@ export function App() {
           </Routes>
         </AppShell>
       </BrowserRouter>
+      <Analytics />
     </FloodForgeProvider>
   );
 }
